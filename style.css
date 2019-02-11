@@ -1,0 +1,729 @@
+/*
+Theme Name: Bit Developer Tech
+Theme URI: 
+Author: Alejandro Zúñiga Hernández
+Author URI: 
+Description: Theme para sitio de presentación personal
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: personal, mobile first, responsive, curriculum
+Text Domain: bitdevelopertech
+*/
+/* 
+img {
+    max-width:100%;
+    } */
+
+html {
+    box-sizing: border-box;    /*Conservar width (padding)*/
+}
+
+*, *:before, *:after { 
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 24px;
+}
+
+.texto-rojo {
+    color: #a61206;
+}
+
+.texto-centrado { 
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/**Encabezado**/
+
+header.encabezado-sitio { 
+    border-bottom: 1px solid #c1c1c1;
+    padding-bottom: 30px;
+}
+
+div.logo { 
+    text-align: center;
+}
+
+img.logotipo {
+    width: 250px;
+}
+
+@media only screen and (min-width:768px){
+    div.logo { 
+        text-align: left;
+    }
+
+}
+
+
+@media only screen and (min-width:992px){
+    div.logo { 
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width:768px){
+    header .encabezado-sitio .contenedor {
+        position: relative;
+    }
+    
+    .informacion-encabezado{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+div.direccion { 
+    display: block;
+    clear: both;
+    padding-top: 10px; 
+}
+
+div.direccion p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center; 
+}
+
+
+@media only screen and (min-width:768px){
+    div.direccion p { 
+        text-align: right;
+    }
+}
+
+/**Menú Redes Sociales**/
+
+
+
+
+nav.sociales ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+
+@media only screen and (min-width:768px){
+
+    nav.sociales ul {
+        float: right;
+    }
+}
+
+.sr-text {
+    display: none;
+}
+
+nav.sociales ul li {
+    position: relative;
+    display: inline-block;
+}
+
+
+nav.sociales ul li a:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    content: '\f0e';
+    font-size: 30px;
+    color: #000000;
+    -webkit-font-smootthing: antialiased;
+}
+
+nav.sociales li a[href*="facebook.com"]::before{
+    content: '\f09a';
+}
+
+nav.sociales li a[href*="twitter.com"]::before{
+    content: '\f099';
+}
+
+nav.sociales li a[href*="youtube.com"]::before{
+    content: '\f16a';
+}
+
+nav.sociales li a[href*="instagram.com"]::before{
+    content: '\f16d';
+}
+
+nav.sociales li a[href*="github.com"]::before{
+    content: '\f092';
+}
+
+
+/**Navegación principal**/
+
+nav.menu-sitio {
+    display: none;
+}
+
+
+@media only screen and (min-width:768px){
+    nav.menu-sitio {
+        display: block;
+    }
+
+}
+
+nav.menu-sitio ul {
+    list-style: none;
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav.menu-sitio ul li a {
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;    
+    color: #000000;
+}
+nav.menu-sitio ul li.current_page_item a {
+    border-bottom: 8px solid #2C3774; 
+}
+nav.menu-sitio ul li:hover{
+    background-color: #4456B4;
+}
+
+@media only screen and (min-width:768px){
+
+    nav.menu-sitio ul li {
+        display: table-cell;
+        width: 1%;
+    }
+}
+
+
+/**Responsive Menú**/
+@media only screen and (max-width:767px){
+    .mobile-menu a {
+        height: 40px;
+        background-color: #4456B4;
+        width: 100%;
+        color: white !important;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .mobile-menu a{
+        display: none;
+    }
+}
+
+
+/* Contenido de los templates */
+
+div.hero {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+
+}
+
+div.hero::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    top: 0;
+    left: 0;
+}
+
+div.hero .contenido-hero {
+        display: table-cell;
+        vertical-align: middle;
+        color: #ffffff;
+        position: relative;
+        width: 100vw;
+        z-index: 2;
+}
+
+
+
+@media only screen and(min-width: 768px) {
+    
+    div.texto-hero {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media only screen and(min-width: 992px) {
+    
+    div.texto-hero {
+        width: 60%;  
+    }
+
+}
+
+
+div.principal {
+    padding: 60px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px){
+        div.principal {
+            margin-top: -90px;
+        }
+}
+
+.contenido-paginas p {
+    font-size: 18px;
+    line-height: 50px;
+}
+
+
+/* Footer */
+
+footer { 
+    margin-top: 30px;
+    padding: 30px 0;
+    border-top: 1px solid #c1c1c1;
+    text-align: center;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li:last-child .separador {
+    display: none;
+}
+footer nav ul li a {
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer .ubicacion { 
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+footer p.copyright {
+    margin-top: 20px;
+}
+
+
+/* Cajas */
+
+.informacion-cajas {
+    display: grid;
+}
+
+@media only screen and (min-width:768px){
+
+    .informacion-cajas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+/* .informacion-cajas .caja {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    color: white;
+    text-align: center;
+} */
+
+.informacion-cajas .caja {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: white;
+    text-align: center;
+}
+@media only screen and (min-width:768px){
+    .informacion-cajas .caja {
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.informacion-cajas .caja:nth-child(1) {
+    background-color: #5143CB;
+}
+.informacion-cajas .caja:nth-child(2) {
+    background-color: #437CCB;
+}
+.informacion-cajas .caja:nth-child(3) {
+    background-color: #3F98C1;
+}
+
+@media only screen and (min-width:768px){
+    .informacion-cajas .caja:nth-child(2) img {
+        margin-top: auto;          /* No presente */
+        order: 2;
+    }
+
+    .informacion-cajas .caja:nth-child(2) div {
+        order: 1;
+
+    }
+}
+
+.contenido-caja {
+    margin: auto;
+    /* display: grid; */
+    grid-template-rows: 20% 20% 40% 20%;
+        grid-template-areas: "."
+                            "arriba"
+                            "texto"
+                            ".";
+}
+
+@media only screen and (min-width:768px){
+    .contenido-caja {
+        grid-template-rows: 20% 30% 30% 20%;
+    }
+}
+
+.contenido-caja >* {
+    align-self: center;
+}
+.contenido-caja h3 {
+    grid-area: arriba;
+    margin: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+
+
+    
+}
+.contenido-caja p {
+    grid-area: texto;
+    padding-top: 10px;
+}
+
+img {
+    max-width: 100%;      /* Añadido por sugerencia */
+    height: auto;
+}
+
+
+@media only screen and (max-width: 767px){
+    div.caja img {
+        margin: auto; /* Query para centrar imagen */
+    }
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+}
+
+
+/* Trabajadores */
+
+.nuestros-trabajadores {
+    padding: 0 60px;
+}
+
+div.texto-trabajador{
+    padding: 20px;
+}
+
+div.texto-trabajador h4 {
+    border-bottom: 1px solid #dfdfdd;
+    padding-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+div.texto-trabajador h4 span {
+    font-size: 20px;
+    color: #F25E52;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.texto-trabajador p {
+    color: #3d3d3d;
+    line-height: 30px;
+}
+
+
+
+
+/* Grid */
+
+@media only screen and (min-width:768px){
+    .contenedor-grid {
+        margin-left: -10px;
+        margin-right: -10px;
+        /* añadido */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .contenedor-grid::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    [class*="columnas"] {
+        padding: 0 10px;
+        float: left;
+    }
+    .columnas1-4 {
+        width: 25%;
+    }
+    .columnas2-4 { 
+        width: 50%;
+    }
+    .columnas3-4 {
+        width: 75%;
+    }
+    .columnas1-3{
+        width: 33.3%;
+    }
+    .columnas2-3{
+        width: 66.6%;
+    }
+
+}
+
+/************************************************************************** 11/02/2019 ***************************************************************************/
+
+/* Fuentes equivalentes */
+
+
+/* body{
+    font-family : 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family : 'Raleway', sans-serif;
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+} */
+/* <----------------------------------FUENTES--------/> */
+ /* Blog */
+
+
+article.entrada-blog img {
+    margin-top: 30px;
+}
+
+header.informacion-entrada {
+    margin-top: 20px;
+}
+
+header.informacion-entrada div.fecha {
+    background-color: ;    /* agregar color */
+    float: left;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 5px;
+    margin-right: 20px;
+}
+
+
+header.informacion-entrada div.fecha time {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+header.informacion-entrada div.fecha time span {
+    font-size: 16px;
+    display: block;
+    clear: both;
+    text-transform: uppercase;
+}
+header.informacion-entrada .titulo-entrada {
+    float: right;
+    width: calc(100%-90px);
+}
+header.informacion-entrada h2 {
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+} 
+header.informacion-entrada p.autor {
+    text-transform: uppercase;
+    color: #505050;              /* GRIS OPCIONAL */
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+p.autor i {
+    font-size: 30px;
+    color: #f19f30;      /* naranja temporal, cambiar paleta */
+}
+
+/* Separar etiqueta "i" del "the_autor", clase autor, "i" despues php  */
+
+div.contenido-entrada p {
+    margin-bottom: 0;
+    line-height: 24px;
+}
+
+
+/* Poner boton en la parte superior, despues del h4 */
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: auto;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 15px 80px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color .5 ease;
+}
+
+/* button rojo (azul) */
+.button.rojo {
+    background-color: #a61206;
+}
+
+.button:hover {
+    background-color: #f19f30;
+}
+
+
+
+
+
+/* SIDEBAR */
+
+aside.sidebar{
+    margin-top: 3px;
+}
+
+form.searchform {
+    position: relative;
+}
+
+form.searchform #searchsubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    background-color: #a61206; /* añadir color personal */
+    text-indent: -9999px;
+    background-image: url(); /* imagen buscador */
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    cursor: pointer;    
+}
+
+form.searchform input {
+    width: 100%;
+    padding: 10px;
+}
+
+
+/* añadir .sr-text */
+
+.sr-text,
+.screen-reader-text {
+    display: none;
+}
+
+
+aside .widget {
+    margin-bottom: 20px;
+}
+
+aside .widget h3 {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+aside .widget ul {
+    list-style: none;
+}
+
+aside .widget ul li {
+    margin-bottom: 20px;
+}
+
+aside .widget ul li a {
+    color: #000000;
+    text-decoration: none;    
+}
+
+aside .widget ul li a:hover {
+    color: #f19f30;
+}
+
