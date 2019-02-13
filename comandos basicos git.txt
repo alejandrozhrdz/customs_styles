@@ -30,3 +30,6 @@ git push origin https://github.com/alejandrozhrdz/customs_styles : develop
 git remote add origin https://github.com/alejandrozhrdz/customs_styles.git
 
 git push -u origin master
+
+git branch -a Listar los barnach actuales
+git push -u origin 11/02/19
