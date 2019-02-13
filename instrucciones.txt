@@ -1,0 +1,24 @@
+
+    Agregando Fluidbox a nuestro theme 
+
+git clone https://github.com/terrymun/Fluidbox.git
+
+> Mover archivos de la carpeta dist
+
+>Copiar fluidbox.min a mi carpeta css
+
+> Copiar jquery.fluidbox.min a carpeta js
+
+agregar a functions.php
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>NO PUDE XD<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+CONTACTO
+
+>Crear page-contacto.php 
+>Se crearon estilos para el campo contacto
+
+>Creando tablas personalizadas en Wordpress
+
