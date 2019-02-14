@@ -22,3 +22,23 @@ CONTACTO
 
 >Creando tablas personalizadas en Wordpress
 
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 14/02/2019 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+Clase 112 Creando archivo para las nuevas funciones 
+>Crear carpeta inc por includes
+
+
+Para agregar database.php es necesario agregar a funcitions lo siguiente
+
+require get_template_directory() . '/inc/database.php';
+
+database.php finalizado 
+
+Procedemos a crear los eventos que se realizaran 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MODEL VIEW CONTROLLER
+
+Se agregó reservaciones.php a la carpeta inc de igual manera se dee agregar a functions.php
+Se agrega el input hidden en el page-contacto.php 
+
+Me quedé en Seccion 11 CLASE 119

@@ -1,4 +1,10 @@
 <?php
+// Tablas personalizadas y otras funciones 
+require get_template_directory() . '/inc/database.php';
+// Funciones para las reservaciones
+require get_template_directory() . '/inc/reservaciones.php';
+
+
 function bitdevelopertech_setup(){
     add_theme_support('post-thumbnails');
     add_image_size('nosotros', 437, 291, true);
